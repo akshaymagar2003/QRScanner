@@ -18,12 +18,12 @@ class LoggedIn : AppCompatActivity() {
         setContentView(binding.root)
         val sharedPref=this?.getPreferences(Context.MODE_PRIVATE)?:return
         val isLogin=sharedPref.getString("Email","1")
-        binding.logout.setOnClickListener {
-            sharedPref.edit().remove("Email").apply()
-            var intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+//        binding.logout.setOnClickListener {
+//            sharedPref.edit().remove("Email").apply()
+//            var intent = Intent(this,MainActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
         if(isLogin=="1")
         {
             var email=intent.getStringExtra("email")
@@ -42,10 +42,7 @@ class LoggedIn : AppCompatActivity() {
                 finish()
             }
         }
-        else
-        {
-          setText(isLogin)
-        }
+
 
     }
 
@@ -56,9 +53,6 @@ class LoggedIn : AppCompatActivity() {
             db.collection("USERS").document(email).get()
                 .addOnSuccessListener {
                         tasks->
-                    binding.name.text=tasks.get("Name").toString()
-                    binding.phone.text=tasks.get("Phone").toString()
-                    binding.emailLog.text=tasks.get("email").toString()
 
                 }
         }
