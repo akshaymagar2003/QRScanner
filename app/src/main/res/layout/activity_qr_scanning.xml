@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_marginTop="50dp"
     android:padding="16dp"
-    tools:context=".LoggedIn">
+    tools:context=".QRScanning">
 
     <Button
         android:id="@+id/scanButton"

@@ -4,17 +4,17 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.qrscanner.databinding.ActivityLoggedInBinding
-import com.example.qrscanner.databinding.ActivityMainBinding
+import com.example.qrscanner.databinding.ActivityQrScanningBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-class LoggedIn : AppCompatActivity() {
+class QRScanning : AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
-    private lateinit var binding: ActivityLoggedInBinding
+    private lateinit var binding: ActivityQrScanningBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityLoggedInBinding.inflate(layoutInflater)
+        binding= ActivityQrScanningBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val sharedPref=this?.getPreferences(Context.MODE_PRIVATE)?:return
         val isLogin=sharedPref.getString("Email","1")
@@ -29,7 +29,7 @@ class LoggedIn : AppCompatActivity() {
             var email=intent.getStringExtra("email")
             if(email!=null)
             {
-                setText(email)
+
                 with(sharedPref.edit())
                 {
                     putString("Email",email)
@@ -42,20 +42,29 @@ class LoggedIn : AppCompatActivity() {
                 finish()
             }
         }
+        else{
 
 
-    }
 
-    private fun setText(email:String?)
-    {
-        db= FirebaseFirestore.getInstance()
-        if (email != null) {
-            db.collection("USERS").document(email).get()
-                .addOnSuccessListener {
-                        tasks->
 
-                }
         }
 
+
+
+
     }
+
+
+//    private fun setText(email:String?)
+//    {
+//        db= FirebaseFirestore.getInstance()
+//        if (email != null) {
+//            db.collection("USERS").document(email).get()
+//                .addOnSuccessListener {
+//                        tasks->
+//
+//                }
+//        }
+//
+//    }
 }

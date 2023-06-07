@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.qrscanner.databinding.ActivityMainBinding
 import com.example.qrscanner.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -44,7 +43,7 @@ class RegisterActivity : AppCompatActivity() {
                                     if(task.isSuccessful)
                                     {
                                             Users.document(email).set(user)
-                                            val intent=Intent(this,LoggedIn::class.java)
+                                            val intent=Intent(this,QRScanning::class.java)
                                             intent.putExtra("email",email)
 
                                             startActivity(intent)
