@@ -73,6 +73,7 @@ class QRScanning : AppCompatActivity() {
         if (result != null && result.contents != null) {
             val decodedValue = result.contents
             binding.decodedTextView.text = decodedValue
+            FirebaseManager.saveToFirestore(decodedValue)
         } else {
             super.onActivityResult(requestCode, resultCode, data)
         }
