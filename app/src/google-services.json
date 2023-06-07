@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "983553886499",
+    "project_id": "qrscanner-f99c1",
+    "storage_bucket": "qrscanner-f99c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983553886499:android:54dc245b91f2eab52fe496",
+        "android_client_info": {
+          "package_name": "com.example.qrscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983553886499-l0un9lksc3m8q944j06n0snu64vt0q85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLbdNnjkdMyU_CpPNwFQw71Qjgdlwez1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983553886499-l0un9lksc3m8q944j06n0snu64vt0q85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
